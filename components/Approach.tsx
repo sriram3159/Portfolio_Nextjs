@@ -108,12 +108,8 @@ const AceternityIcon = ({ order }: { order: string }) => {
     </div>
   );
 };
-// Icon component
-interface IconProps {
-    className: string;
-  }
 
-export const Icon : React.FC<IconProps> = ({ className, ...rest }) => {
+export const Icon = ({ className, ...rest }: any) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
