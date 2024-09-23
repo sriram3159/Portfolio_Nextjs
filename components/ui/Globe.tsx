@@ -72,6 +72,8 @@ export function Globe({ globeConfig, data }: WorldProps) {
     | null
   >(null);
 
+
+
   const globeRef = useRef<ThreeGlobe | null>(null);
 
   const defaultProps = {
@@ -114,7 +116,10 @@ export function Globe({ globeConfig, data }: WorldProps) {
   };
 
   const _buildData = () => {
-    const arcs = data;
+    const arcs = data.filter(item => 
+      item.startLat != null && item.startLng != null &&
+      item.endLat != null && item.endLng != null
+    );
     let points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
@@ -234,6 +239,18 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
+    const handleResize = () => {
+      gl.setSize(window.innerWidth, window.innerHeight);
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [gl]);
+
+  useEffect(() => {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
@@ -241,6 +258,9 @@ export function WebGLRendererConfig() {
 
   return null;
 }
+
+
+
 
 export function World(props: WorldProps) {
   const { globeConfig } = props;
