@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: dynamos-frontend-container
-        image: 711387106309.dkr.ecr.us-east-1.amazonaws.com/dynamos-frontend:latest
+        image: 820242928163.dkr.ecr.us-east-1.amazonaws.com/dynamos-frontend:latest
         imagePullPolicy: Always
         ports:
           - containerPort: 80
