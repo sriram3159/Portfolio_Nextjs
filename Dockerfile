@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the React.js application
-RUN npm run build
+RUN npm run build || tail -n 100 /root/.npm/_logs/*
 
 # Expose the port that React.js runs on
 EXPOSE 3000
