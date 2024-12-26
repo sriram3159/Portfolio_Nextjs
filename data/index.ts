@@ -99,7 +99,7 @@ export const navItems = [
       id: 4,
       title: "Portfolio Website",
       des: "Built a responsive portfolio website using Next.js, React, and Framer Motion. Showcases projects and skills with smooth animations, ensuring a modern and engaging user experience.",
-      img: "/p4.svg",
+      img: "/portfolio.webp",
       iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
       link: "https://github.com/sriram3159/Portfolio_Nextjs.git",
     },
