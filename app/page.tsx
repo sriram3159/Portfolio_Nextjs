@@ -8,6 +8,7 @@ import Clients from "../components/Clients";
 import Experience from "@/components/Experience";
 import { Approach } from "@/components/Approach";
 import Footer from "@/components/Footer";
+import  { FloatingDockDemo } from "@/components/TechStack";
 
 const Home = () => {
   return (
@@ -17,9 +18,11 @@ const Home = () => {
         <Hero />
         <Grid/>
         <RecentProjects/>
-        <Clients/>
+        {/* <Clients/> */}
         <Experience/>
         {/* <Approach/> */}
+        {/* <TechStack/> */}
+        <FloatingDockDemo/>
         <Footer/>
       </div>
     </main>
