@@ -8,7 +8,7 @@ import Clients from "../components/Clients";
 import Experience from "@/components/Experience";
 import { Approach } from "@/components/Approach";
 import Footer from "@/components/Footer";
-import  { FloatingDockDemo } from "@/components/TechStack";
+import  {  MyTechStack } from "@/components/TechStack";
 
 const Home = () => {
   return (
@@ -22,7 +22,7 @@ const Home = () => {
         <Experience/>
         {/* <Approach/> */}
         {/* <TechStack/> */}
-        <FloatingDockDemo/>
+        <MyTechStack/>
         <Footer/>
       </div>
     </main>

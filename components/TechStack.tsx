@@ -27,7 +27,7 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import Image from "next/image";
 
-export function FloatingDockDemo() {
+export function MyTechStack() {
   const links_1 = [
     {
       title: "React",
